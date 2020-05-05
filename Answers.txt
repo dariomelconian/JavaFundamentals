@@ -1,0 +1,41 @@
+Western University
+CS1027 Computer Science Fundamentals II
+
+Student name: Dario Melconian
+Student ID:  251044493
+
+Question1
+---------
+1. Explain how method m1 can be invoked in statement var1.m(1) even though method m1 is not implemented in class Answer1.java.
+
+In ClassA.java , there is a method 'm(int test)' which is type void, and simply prints the statement that the test (with number of input parameter), 
+which is 1 in this case, has been passed.  It can still be invoked despite not being in the class 'Answer1.java' because Answer1.java can inherit the
+methods from ClassA.  This is inheritance.  So by saying Answer1.java extends ClassA, it can invoke the m() method without being implemented in Answer1.java.
+
+2. Explain how to implement method numObjectsAnswer1 so it can compute the number of objects of type Answer1 that have been created by other Java classes.  
+
+The instance variable that must be created to compute the number of objects of type Answer1 that have been created by other Java classes must be a static type variable.
+If it is a static variable, it is shared among all the objects at the class level, allowing it to be computed for all objects.  It is a global variable.
+
+3. Since both, methodB1 and methodB2, throw Exception2 explain how to implement method1 so that it can determine which of these two methods from ClassB threw the exception.
+
+I used an if statement, as found in ClassB, that depending on the test number, it throws a different Exception.  So, if test == 3, I created the if statement under Exception1, 
+as given in the ClassB, and if test == 5, it was put under Exception2. 
+
+Additionally, to decipher between Exception 2 and methodB1 and methodB2, I simply looked at the test. 
+If the test is = 5, B1 method exception is thrown in Exception2 (using an if statement), and if test is = 4,
+B2 method exception is thrown in Exception 2 (once again using the if statement).  This helped distinguish between
+the two. 
+
+
+Question 2
+----------
+4. For a variable TreeNode r, explain how to determine whether the data item stored in the object referenced by r is of type LinkedList or CircularArray.
+
+For distinguishing between LinkedList vs CircularArray datatype, I created 2 if-statements where 1) if r1 is linked list type, and 2) if r2 is linked list type.
+This was done by using the 'instanceof' operator.  This will show the 2 cases, where r1 = linked r2 = circular, and vise versa.  This allows me to have 2 separate cases.  One, where r1, r2 is the parameter order
+for mergeToLinkedList, and the other is r2, r1 for mergeToLinkedList.  This resulted in me having to cast (CircularArray) and (LinkedList) when creating my merged LinkedList for each type, in the order that
+was required for the method. (LinkedList, CircularArray), specifically. 
+
+
+
